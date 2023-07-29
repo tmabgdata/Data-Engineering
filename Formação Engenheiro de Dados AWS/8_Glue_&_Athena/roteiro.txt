@@ -1,0 +1,71 @@
+ETL com Glue (AWS) e Analysis com Athena (AWS)
+
+1 Criar função ADM para o Glue (IAM AWS)
+2 Criar Bucket S3 (unique name)
+- Estrutura de Pastas s3:
+
+	|- dataLake (dados transformados)
+	|- temp (dados temporários do processamento do Glue)
+	|- logs (logs registrados)
+	|- scripts (script em python ou scala, criado pelo Glue)
+	|- sourcedata (dados de origem, para serem transformados e enviados para a pasta datalake)
+		|- clientes.csv
+		|- itensvenda.csv
+		|- produtos.csv
+		|- vendas.csv
+		|- vendedores.csv
+
+3 Carregar os arquivos.csv (dados do curso) para o diretório 'sourcedata'
+4 Ir para o Glue
+5 Criar database no Glue
+6 Criar Crawler e rastrear pasta 'sourcedata'
+7 Rodar o crawler
+
+8 Criar ETL Jobs (Data Integration and ETL)
+- AWS Glue Studio:
+- Visual Blank Canvas
+- Configurar parâmetros do Job e Salvar
+- Iniciar o Job ETL
+	- 1º nó (AWS Glue Data Catalog)
+		 renomear com o nome da tabela selecionada (vendas)
+	- 2º nó (Transform - ApplyMapping)
+		 ligar ao nó vendas e renomear foreign keys (idvendedor, idcliente)
+	- 3º nó (AWS Glue Data Catalog)
+		 renomear com o nome da tabela selecionada (itens_vendas)
+	- 4º nó (Transform - ApplyMapping)
+		 ligar ao nó itens_vendas e renomear foreign keys (idproduto, idvenda)
+	- 5º nó (Transform - Join)
+		 renomear 'vendas_itensvendas',
+		 selecionar tipo de join (inner join),
+		 adicionar condição (chaves relacionadas)
+	- 6º nó (AWS Glue Data Catalog),
+		 renomear com o nome da tabela selecionada (clientes)
+	- 7º nó (Transform - Join),
+		 join_clientes com nó vendas_itensvendas (join_clientes) chaves = (idcliente - idcliente_vendas)
+	- 8º nó (AWS Glue Data Catalog),
+		 renomear com o nome da tabela selecionada (produtos)
+	- 9º nó (Transform - Join),
+		 join_produtos com nó join_clientes (idproduto - idproduto_itensvendas)
+	- 10º nó (AWS Glue Data Catalog),
+		 renomear com o nome da tabela selecionada (vendedores)
+	- 11º nó (Transform - Join),
+		 join_vendedores com nó join_produtos (idvendedor - idvendedor_vendas)
+	- 12º nó (Transform - ApplyMapping),
+		 ligar ao nó join_vendedores e remover chaves estrangeiras e primárias
+	- 13º nó (Data Target - S3 Bucket),
+		 renomear para 'datalake',
+		 mudar formato dos dados para 'Parquet',
+		 adicionar tipo de compressão 'Snappy',
+		 adicionar link do diretório (s3 bucket) 'datalake',
+		 adicionar partição por status
+
+9 Na aba Job Details, reconfigurar os caminhos criados para o arquivos, para os diretórios criados:
+	- logs (diretório logs)
+	- scripts (diretório scripts)
+	- temp (diretório temp)
+10 Salvar e executar o Job
+11 Verificar arquivos transformados e particionados no bucket S3
+12 Criar um novo banco de dados (datalake) no Glue, para receber os dados do datalake criado
+13 Criar crawler para extrair dados e enviar ao novo banco de dados (datalake)
+14 Acessar o Athena
+15 Analisar dados normalmente com comandos SQL
