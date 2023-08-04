@@ -12,7 +12,7 @@ Python_S3_Redshift/
 │
 ├── scripts/
 │   ├── upload_to_s3.py
-│   ├── create_redshift_tables.sql
+│   ├── create_and_load_to_s3.sql
 │
 └── README.md
 ```
@@ -35,13 +35,33 @@ Python_S3_Redshift/
    - Abra o editor SQL no console do Amazon Redshift.
 
 4. **Criando Tabelas Particionadas:**
-   - No editor SQL, execute os comandos dos arquivos `create_redshift_region_tables.sql` e `create_redshift_time_tables` para criar as tabelas particionadas no Amazon Redshift.
+   - No editor SQL, execute os comandos do arquivo `create_and_load_to_s3.sql` para criar as tabelas particionadas no Amazon Redshift.
 
 5. **Carregando Dados nas Tabelas Particionadas:**
    - No editor SQL do Amazon Redshift, execute os comandos `COPY` para carregar os dados das partições do Amazon S3 nas tabelas correspondentes.
 
-6. **Executando Consultas Analíticas:**
-   - Utilize o editor SQL do Amazon Redshift para executar consultas nas tabelas particionadas e observe o desempenho.
+6. **Carregando Dados no Data Lake S3:**
+   - No editor SQL do Amazon Redshift, execute os comandos `UNLOAD` para carregar os dados das partições no Amazon S3 nas tabelas correspondentes.
+
+
+## Estrutura do Projeto após a execução
+
+```
+Python_S3_Redshift/
+│
+├── data/
+│   ├── sales.csv
+    ├── sales_by_region
+        ├── sales_eu.csv
+        ├── sales_us.csv
+│   ├── sales_by_time
+        ├── sales_by_time.csv
+├── scripts/
+│   ├── upload_to_s3.py
+│   ├── create_and_load_to_s3.sql
+│
+└── README.md
+```
 
 ## Notas
 
