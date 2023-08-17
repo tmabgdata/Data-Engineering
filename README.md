@@ -16,9 +16,11 @@ The "Formação Engenheiro de Dados AWS" project offers comprehensive insights i
 
 ### [Python, S3, and Redshift](https://github.com/tmabgdata/Data-Engineering/tree/master/Python_S3_Redshift)
 
+This project showcases the integration of Python, Amazon S3, and Amazon Redshift for data extraction, transformation, and loading (ETL) processes, providing a practical demonstration of data engineering techniques.
+
 ### [Python, MongoDB](https://github.com/tmabgdata/Data-Engineering/tree/master/Python_%26_MongoDB)
 
-This project showcases the integration of Python, Amazon S3, and Amazon Redshift for data extraction, transformation, and loading (ETL) processes, providing a practical demonstration of data engineering techniques.
+This integration project between python and mongodb is just a practice to perform basic queries and manipulations in NoSQL databases
 
 ## How to Use
 
