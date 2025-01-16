@@ -1,0 +1,9 @@
+{
+	"name": "tmabostonservicesadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ca3509af-4871-4169-91dd-8927da0a2adb",
+		"tenantId": "23bc7bcd-4cbd-4e1e-8451-c13c0be1981c"
+	}
+}

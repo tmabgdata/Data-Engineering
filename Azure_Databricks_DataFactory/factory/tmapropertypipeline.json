@@ -1,0 +1,9 @@
+{
+	"name": "tmapropertypipeline",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a253afa9-42c7-4b7c-b064-3de0f361caec",
+		"tenantId": "23bc7bcd-4cbd-4e1e-8451-c13c0be1981c"
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"name": "ds_boston_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStoragels",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "boston_data.zip",
+				"container": "zipserviceboston"
+			},
+			"columnDelimiter": ",",
+			"compressionCodec": "ZipDeflate",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\u0000\u0000\b\u0000/ZN�4W�\u000e>\u0001D\u0002n\u0006\u0014\u0000\u0000\u0000boston_data_2015.csv�{s�H�/���\u0014�8q��D�v�\u001f�������Z��؈�p�\u0012lqM�Z��Z�ӟ̪\u0002\t�E\u0002�-��-\u0015����|g��b���Ջ�������.'˛z��r3Yϧ�6���z��]̗��\u0012�Z.�mf���\u0002�[o��۵��vU�[���r�?��6�z��}�_��f\u0012>���ԓ���o��e}3]m���\u0006/��m6����r�l\u001e濙//��\u0019��a\u0006O���7�\u0019lxsw���b��w��]\\��K���E�E=�x�~��Z./;߼[׫�p�zw��tu9�Y�\u0017�\u0005|��\f���jx!�)�������\\",
+				"type": "String"
+			},
+			{
+				"name": "/a\u0001����\u0017��G���zy�Np�&�����(��P&��|�\b�O\b��\u0012B�8=#l��\u0012��89#�s�<\u0013�L�ɫ�o��('�{U�\u001c�x�N��o��r�\u0019��Ws7����y=]���M�����)�$����\u001a��:��\\%�}��������{x��\u001f�էuR��տ��&\u0014�+�{Mh~�\u0014˻�\u0006���&���o�7�e�������C���O\u0017��Q�K�b�^O/�n��\u0006�O?�I�f�����}��H�d�'4��",
+				"type": "String"
+			}
+		]
+	}
+}
