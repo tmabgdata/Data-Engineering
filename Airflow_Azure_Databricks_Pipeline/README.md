@@ -7,6 +7,10 @@ This project implements a data pipeline to extract, transform, and report curren
 2. **Transformation**: Converts rates into different formats, performs aggregations, and additional calculations.
 3. **Reporting**: Sends transformed data and generated graphs to a Slack channel.
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dof97idbn/image/upload/v1737264786/pipeline_airflow_databricks_slack.jpg" alt="Airflow Databricks Slack" width="600" />
+</p>
+
 ## Project Structure
 
 ```text
