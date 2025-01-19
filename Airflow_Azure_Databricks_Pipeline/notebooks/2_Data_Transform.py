@@ -17,7 +17,7 @@ df_currency = df_bronze.filter(df_bronze.currency.isin(currency))
 df_currency = df_currency.withColumn('date', to_date(df_currency.date))
 
 # Group by 'date' and pivot the 'currency' column to get the exchange rates
-results_conversion_rate = df_currency.groupBy('date').pivot('currency').agg(first('rate')).orderBy('date', ascending=True)
+results_conversion_rate = df_currency.groupBy('date').pivot('currency').agg(first('rate')).orderBy('date', ascending=False)
 
 # Select the results and convert the rates to real values (1 / rate)
 results_real_values = results_conversion_rate.select('*')
