@@ -39,7 +39,7 @@ def get_exchange_rate(date, base='BRL'):
     The URL includes the base parameter to choose the source currency.
     """
     url = f"https://api.apilayer.com/exchangerates_data/{date}?base={base}"
-    headers = {"apikey": "P6zxgJE2JKA3wYbzQyyw5fOWxYCHDf9o"}
+    headers = {"apikey": "---"}
     
     # Make the GET request
     print(f"Fetching exchange rate data for date: {date}...")
