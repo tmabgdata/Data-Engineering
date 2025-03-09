@@ -22,19 +22,6 @@ This project highlights the creation of data pipelines using Azure Data Lake, fo
 
 This project integrates Azure Databricks and Data Factory to create robust data processing pipelines. It demonstrates the orchestration of big data workflows and advanced analytics using these powerful Azure tools.
 
-
-### [Data Engineer AWS Formation](https://github.com/tmabgdata/Data-Engineering/tree/master/Forma%C3%A7%C3%A3o%20Engenheiro%20de%20Dados%20AWS)
-
-The "Formação Engenheiro de Dados AWS" project provides comprehensive insights into data engineering concepts and practices within the AWS ecosystem. This project includes hands-on exercises and real-world examples to solidify foundational skills.
-
-### [Python, S3, and Redshift](https://github.com/tmabgdata/Data-Engineering/tree/master/Python_S3_Redshift)
-
-This project demonstrates the integration of Python, Amazon S3, and Amazon Redshift for building ETL (Extract, Transform, Load) pipelines. It provides a practical guide to implementing scalable data workflows in the cloud.
-
-### [Python, MongoDB](https://github.com/tmabgdata/Data-Engineering/tree/master/Python_%26_MongoDB)
-
-A practice project showcasing the integration of Python with MongoDB to perform basic NoSQL database operations, including data queries, manipulations, and storage.
-
 ## How to Use
 
 1. Navigate to individual project folders for detailed documentation, source code, and step-by-step guides.
@@ -44,7 +31,9 @@ A practice project showcasing the integration of Python with MongoDB to perform 
 ## Contributions
 
 Contributions are always welcome! If you'd like to enhance existing projects or add new data engineering analyses, feel free to:
+
 - Open issues to suggest improvements or report bugs.
+- Fork the repository and create your own branches.
 - Submit pull requests with your valuable contributions.
 
 ## Contact
