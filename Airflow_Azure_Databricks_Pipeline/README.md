@@ -1,5 +1,9 @@
 # Project: Data Pipeline with Airflow, Azure Databricks, and Slack Integration
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dof97idbn/image/upload/v1741642287/Airflow_Databricks_Slack.png" alt="Airflow Databricks Slack" width="600" />
+</p>
+
 ## Overview
 This project implements a data pipeline to extract, transform, and report currency exchange rates using Airflow, Azure Databricks, and Slack. The pipeline performs the following key steps:
 
@@ -7,9 +11,6 @@ This project implements a data pipeline to extract, transform, and report curren
 2. **Transformation**: Converts rates into different formats, performs aggregations, and additional calculations.
 3. **Reporting**: Sends transformed data and generated graphs to a Slack channel.
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dof97idbn/image/upload/v1737307482/data_pipeline_airflow.jpg" alt="Airflow Databricks Slack" width="600" />
-</p>
 
 ## Project Structure
 
