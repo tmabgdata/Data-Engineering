@@ -4,9 +4,13 @@
   <img src="Images\Data Pipeline Azure Architecture.png" alt="Data Pipeline" width="600">
 </p>
 
+
+[Link para o Dashboard Final](https://app.powerbi.com/view?r=eyJrIjoiNmUzMWZkMDQtNGM5OS00YTcwLThhNGQtNjg1NzQ5ZGVhMzJjIiwidCI6ImU1YTM3MzU2LTI2MjYtNGI0ZC05NTA5LTdiNmQxODA0ODU5ZiJ9&pageName=ReportSection)
+
 ## Objetivo
 
 Produzir um relatório visual e dinâmico detalhado com uma análise de negócio feita a partir dos dados com o foco em explorar a base de dados e identificar padrões, oportunidades, possibilidade de criação de produtos e soluções.
+
 
 <p align="center">
   <img src="Images\dashboard_2.png" alt="Page 2" width="600">
