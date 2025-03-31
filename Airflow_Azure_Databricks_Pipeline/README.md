@@ -12,6 +12,49 @@ This project implements a data pipeline to extract, transform, and report curren
 3. **Reporting**: Sends transformed data and generated graphs to a Slack channel.
 
 
+## Results
+
+### Slack Messages Example
+- CSV file sent as an attachment.
+- Real-time exchange rate trend graphs.
+
+### Output Images
+Images are generated and stored in the `images` folder in the repository.
+
+#### DAG Complete in Airflow
+<p align="center">
+  <img src="images/airflow_dag_complete.png" alt="Airflow DAG Complete" width="600">
+</p>
+
+#### Jobs in Azure Databricks
+<p align="center">
+  <img src="images/databricks_jobs.png" alt="Azure Databricks Jobs" width="600">
+</p>
+
+#### Slack Messages
+<p align="center">
+  <img src="images/slack_message_csv.png" alt="Slack CSV Message" width="600">
+</p>
+
+#### Slack Graphs
+<p align="center">
+  <img src="images/slack_message_graph.png" alt="Slack CSV Message" width="600">
+</p>
+
+#### Example Graphs
+
+<p align="center">
+  <img src="images/USD_trend.png" alt="USD Trend" width="600">
+</p>
+
+<p align="center">
+  <img src="images/EUR_trend.png" alt="EUR Trend" width="600">
+</p>
+
+<p align="center">
+  <img src="images/GBP_trend.png" alt="GBP Trend" width="600">
+</p>
+
 ## Project Structure
 
 ```text
@@ -112,48 +155,6 @@ $ airflow scheduler &
 
 2. Enable the DAG `run_elt_notebook` in Airflow.
 
-## Results
-
-### Slack Messages Example
-- CSV file sent as an attachment.
-- Real-time exchange rate trend graphs.
-
-### Output Images
-Images are generated and stored in the `images` folder in the repository.
-
-#### DAG Complete in Airflow
-<p align="center">
-  <img src="images/airflow_dag_complete.png" alt="Airflow DAG Complete" width="600">
-</p>
-
-#### Jobs in Azure Databricks
-<p align="center">
-  <img src="images/databricks_jobs.png" alt="Azure Databricks Jobs" width="600">
-</p>
-
-#### Slack Messages
-<p align="center">
-  <img src="images/slack_message_csv.png" alt="Slack CSV Message" width="600">
-</p>
-
-#### Slack Graphs
-<p align="center">
-  <img src="images/slack_message_graph.png" alt="Slack CSV Message" width="600">
-</p>
-
-#### Example Graphs
-
-<p align="center">
-  <img src="images/USD_trend.png" alt="USD Trend" width="600">
-</p>
-
-<p align="center">
-  <img src="images/EUR_trend.png" alt="EUR Trend" width="600">
-</p>
-
-<p align="center">
-  <img src="images/GBP_trend.png" alt="GBP Trend" width="600">
-</p>
 
 ## Data Layer Structure
 - **Bronze**: Raw data in Parquet format.
